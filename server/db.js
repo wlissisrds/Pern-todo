@@ -1,4 +1,5 @@
-//conectando database ao servidor
+// conectando database ao servidor
+// POOL -> especifica onde quero inserir e buscar dados
 const Pool = require('pg').Pool;
 
 const pool = new Pool({

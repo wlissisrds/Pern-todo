@@ -15,4 +15,7 @@ CREATE TABLE todo(
   description VARCHAR(255)  
 );
 
-#
+# Pool usando a biblioteca pg
+
+- const Pool = require('pg').Pool;
+indica onde eu devo aplicar meus comandos SELECT, INSERT etc..

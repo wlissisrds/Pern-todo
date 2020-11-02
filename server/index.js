@@ -14,7 +14,17 @@ app.use(express.json());
 // create todo
 app.post("/todos", async(req, res) => {
     try {
-        console.log(req.body)
+        const {description} = req.body;
+
+        // query -> buscar informação para o pool
+        // VALUES($1, $2) correspondente aos valores [v1, v2];
+        const newTodo = await pool.query("INSERT INTO todo (description) VALUES($1)",
+        [description]);
+
+        res.json(newTodo);
+
+        //mostrar o corpo da requisição
+        // console.log(req.body)
     } catch (error) {
         console.error(error.message);
     }
