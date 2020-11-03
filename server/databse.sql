@@ -1,3 +1,4 @@
+/*comandos aplicados diretamente ao baco de dados*/
 CREATE DATABASE perntodo;
 
 CREATE TABLE todo(
