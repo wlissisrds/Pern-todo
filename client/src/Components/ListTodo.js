@@ -1,4 +1,7 @@
 import React, {Fragment, useEffect, useState} from 'react';
+// component
+import EditTodo from "./EditTodo";
+
 
 const ListTodo = () => {
 
@@ -57,7 +60,7 @@ const ListTodo = () => {
       {todos.map(todo => (
           <tr key={todo.todo_id}>
               <td>{todo.description}</td>
-              <td>Edit</td>
+              <td><EditTodo todo = {todo}></EditTodo></td>
               <td><button className="btn btn-danger" 
               onClick={() => deleteTodo(todo.todo_id)}>Delete</button></td>
           </tr>
